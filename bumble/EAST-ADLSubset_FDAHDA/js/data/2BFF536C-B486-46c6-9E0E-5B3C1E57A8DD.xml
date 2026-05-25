@@ -1,0 +1,13 @@
+tocTab[tocTab.length] = new Array("0.2.2:1", "", "Datatypes", "EARoot/EA2/EA2/EA107.htm", "175.png", "58", "0", "", "Logical diagram0","{0FC46AED-6D24-448f-87D6-3A26E430C557}");
+tocTab[tocTab.length] = new Array("0.2.2:2", "", "ArrayDatatype", "EARoot/EA2/EA2/EA110.htm", "5.png", "E263", "0", "", "Class0","{7D607C58-8A67-4b3a-82C7-1268A035D1E1}");
+tocTab[tocTab.length] = new Array("0.2.2:3", "", "CompositeDatatype", "EARoot/EA2/EA2/EA111.htm", "5.png", "E260", "0", "", "Class0","{0E778F31-4152-4ce5-B51E-104870A55EDC}");
+tocTab[tocTab.length] = new Array("0.2.2:4", "", "EABoolean", "EARoot/EA2/EA2/EA112.htm", "5.png", "E264", "0", "", "Class0","{8DE10996-BEC1-44e0-94E3-CB124D2A694C}");
+tocTab[tocTab.length] = new Array("0.2.2:5", "", "«atpType» EADatatype", "EARoot/EA2/EA2/EA113.htm", "5.png", "E259", "0", "", "Class0","{01E487F6-8AE2-4620-A617-B482404D8FFE}");
+tocTab[tocTab.length] = new Array("0.2.2:6", "", "«atpPrototype» EADatatypePrototype", "EARoot/EA2/EA2/EA114.htm", "5.png", "E261", "0", "", "Class0","{193FFECB-A63A-4e69-893D-78F409864CB6}");
+tocTab[tocTab.length] = new Array("0.2.2:7", "", "EANumerical", "EARoot/EA2/EA2/EA115.htm", "5.png", "E266", "0", "", "Class0","{C3B7BF74-6A76-4a54-994D-79812BADB92B}");
+tocTab[tocTab.length] = new Array("0.2.2:8", "", "EAString", "EARoot/EA2/EA2/EA116.htm", "5.png", "E267", "0", "", "Class0","{C3F56F1F-F3EE-44a2-BA35-C6B0FBC88EBF}");
+tocTab[tocTab.length] = new Array("0.2.2:9", "", "Enumeration", "EARoot/EA2/EA2/EA117.htm", "5.png", "E262", "0", "", "Class0","{1C38542B-750C-400a-84E6-ED07357E8D81}");
+tocTab[tocTab.length] = new Array("0.2.2:10", "", "EnumerationLiteral", "EARoot/EA2/EA2/EA118.htm", "5.png", "E268", "0", "", "Class0","{C988DA98-DE18-4178-AAD3-0D95CF706E25}");
+tocTab[tocTab.length] = new Array("0.2.2:11", "", "Quantity", "EARoot/EA2/EA2/EA119.htm", "5.png", "E265", "0", "", "Class0","{9A214F41-622B-474d-9FD8-133338E36FBF}");
+tocTab[tocTab.length] = new Array("0.2.2:12", "", "RangeableValueType", "EARoot/EA2/EA2/EA120.htm", "5.png", "E270", "0", "", "Class0","{F91A2609-CAE8-45ee-B554-475516D6AA50}");
+tocTab[tocTab.length] = new Array("0.2.2:13", "", "Unit", "EARoot/EA2/EA2/EA121.htm", "5.png", "E269", "0", "", "Class0","{E09D0995-9F42-4d54-AD8D-3FC95579FEAE}");

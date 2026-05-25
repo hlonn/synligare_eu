@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.corrections.feature_1.0.0.201506261333.jar" id="org.eclipse.eatop.volvo.corrections.feature" version="1.0.0.201506261333">
+      <category name="org.eclipse.eatop.corrections.category1"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.corrections.category1" label="Corrections"/>
+</site>

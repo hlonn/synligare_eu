@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.variablility.feature_1.0.0.201508201453.jar" id="org.eclipse.eatop.volvo.variablility.feature" version="1.0.0.201508201453">
+      <category name="Variability"/>
+   </feature>
+   <category-def name="Variability" label="Variability"/>
+</site>

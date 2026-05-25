@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+<title>FUSE-Synligare Seminar 2015</title>
+
+<link rel="stylesheet" href="//synligare.eu/onewebstatic/562345e837.css">
+<script type="text/javascript" src="//synligare.eu/onewebstatic/2c90418b9e.js"></script>
+</head>
+<body class="body blockbody">
+
+
+
+<div class="component  stretch template">
+<div class="self">
+<div class="row" style="min-height:1976px;width:950px;margin:auto;">
+<div class="extra" style="margin:87.5px 248px 0px 0px;">
+<div class="component " style="width:702px;">
+<div class="self mobile-leaf text textnormal mobile-undersized-upper" style="width:702px;min-height:1888px;">
+<p><img border=0 height=52 src="FUSE.jpg"><img border=0 height=52 src="SYNLIGARE.png"></p><h1><span class="textheading1 mobile-oversized">
+Joint Seminar on Functional Safety and Model Based Engineering </span></h1><p><span> </span></p><p><span>Expectations on vehicle systems are ever increasing, and their development face profound challenges. Safety, functionality, performance, time to market are just some of the constraints that need to be respected, in a constantly improving approach to system design and its development methods. </span></p><p><span> </span></p><p><span>FUSE and Synligare are FFI projects addressing some of these challenges and we invite to a seminar where we want to present problem formulations and preliminary concepts and tools. </span></p><p><span> </span></p><p><span>The two projects have complementary scope:</span></p><p><span>Synligare is about model based engineering methods and tools, allowing more efficient collaboration within and across organizations.</span></p><p><span>FUSE is about methods and architectures meeting the challenges of autonomous driving. </span></p><p><span> </span></p><p><span>Topics:</span></p><p><span>•Needs on engineering methods and architectures for autonomous driving</span></p><p><span>•Concepts for model-based engineering of safety-related automotive systems</span></p><p><span>•Representation</span></p><p><span>•Model Exchange</span></p><p><span>•Visualization</span></p><p><span>•Metrics</span></p><p><span>&nbsp;</span></p><p><span>Time: May 22nd 9-12 (Presentation), 12-14 (Tool demos)</span></p><p><span>Location: Volvo Group, Advanced Technology And Research, Lundbystrand, Gothenburg</span></p><p><span>Registration: <a href="mailto:registration@synligare.eu">info@synligare.eu</a>  </span></p><p><span>&nbsp;</span></p><p><span>Welcome!</span></p><p><span> </span></p><p><span>FUSE and Synligare Project Teams</span></p><p><span>&nbsp;</span></p><p><span>Autoliv – Arccore – Comentor - KTH - Qamcom – Semcon – Systemite - SP - Volvo AB – Volvo Cars</span></p><p><span>&nbsp;</span></p><p><span><b>Preliminary Agenda</b></span></p><p><span>09:00 Intro</span></p><p><span>09:15 Needs identification - FUSE</span></p><p><span>10:00 Coffe break</span></p><p><span>10:15 Concepts for model exchange, views and metrics - Synligare</span></p><p><span>10:45 Tool Example - Synligare</span></p><p><span>11:45 Wrap-Up and Intro to afternoon</span></p><p><span>12:00 Lunch Break and Tool Demos</span></p><p><span>•	SystemWeaver</span></p><p><span>•	Enterprise Architect</span></p><p><span>•	EATOP</span></p><p><span>14:00: End of Seminar </span></p>
+    <span>
+</div>
+
+    
+
+</div>
+</div>
+</div>
+<div style="clear:both"></div>
+</div>
+</div>
+<footer>
+</footer>
+<div class="end"></div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.xsltransformer.feature_1.0.0.201512171409.jar" id="org.eclipse.eatop.volvo.xsltransformer.feature" version="1.0.0.201512171409">
+      <category name="org.eclipse.eatop.volvo.xsltransformer_category"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.volvo.xsltransformer_category" label="XSL Transformer"/>
+</site>

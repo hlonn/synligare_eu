@@ -1,0 +1,31 @@
+HTML, BODY
+{
+padding: 0;
+border: 0px none;
+font-family: Verdana;
+font-weight: none;
+}
+.tags_div
+{
+padding: 3px;
+border: 1px solid #A8A8C3;
+background-color: white;
+width: 500px;
+-moz-border-radius: 5px;
+}
+H1
+{
+font-size: 16px;
+font-weight: none;
+}
+A:link
+{
+color: #676F9D;
+text-decoration: none;
+}
+A:hover
+{
+text-decoration: none;
+background-color: #4F5AA1;
+color: white;
+}

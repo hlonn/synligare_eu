@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.assistant.feature_1.0.0.201508201444.jar" id="org.eclipse.eatop.volvo.assistant.feature" version="1.0.0.201508201444">
+      <category name="org.eclipse.eatop.assistant"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.assistant" label="Assistans"/>
+</site>

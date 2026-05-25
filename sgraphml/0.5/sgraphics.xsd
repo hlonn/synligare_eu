@@ -1,0 +1,878 @@
+<?xml version="1.0"?>
+
+<!-- Header -->
+<xs:schema
+    targetNamespace="http://www.synligare.eu/sgraphml"
+
+    xmlns="http://www.synligare.eu/sgraphml"
+    xmlns:s="http://www.synligare.eu/sgraphml"
+    xmlns:g="http://graphml.graphdrawing.org/xmlns"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    >
+ 
+  <!--                             -->
+  <!-- Enumeration Types -->
+  <!--                             -->
+
+  <!-- LineType -->
+  <xs:simpleType name="lineType.type">
+    <xs:annotation>
+      <xs:documentation>
+        The valid line types for an edge or node.
+        <p>
+          Valid values are:
+          <ul>
+            <li>
+              <b>line</b>: for a continous line
+            </li>
+            <li>
+              <b>dashed</b>: for a dashed line
+            </li>
+            <li>
+              <b>dotted</b>: for a dotted line
+            </li>
+            <li>
+              <b>dashed_dotted</b>: for a dash-dotted line
+            </li>
+          </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="line"/>
+      <xs:enumeration value="dashed"/>
+      <xs:enumeration value="dotted"/>
+      <xs:enumeration value="dashed_dotted"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Shape of Shape Nodes -->
+  <xs:simpleType name="shapeType.type">
+     <xs:restriction base="xs:NMTOKEN">
+      <xs:annotation>
+      <xs:documentation>
+        non-rectangular shape types
+        <p>
+          Valid values are:
+          <ul>
+            <li>
+              <b>rectangle</b>
+              : for a rectangular shape
+            </li>
+            <li>
+              <b>roundrectangle</b>
+              : for a rectangular shape with rounded corners
+            </li>
+            <li>
+              <b>ellipse</b>
+              : for an elliptical shape
+            </li>
+            <li>
+              <b>triangle</b>
+              : for a triangular shape
+            </li>
+          </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:enumeration value="rectangle"/>
+    <xs:enumeration value="roundrectangle"/>
+    <xs:enumeration value="ellipse"/>
+    <xs:enumeration value="triangle"/> 
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Arrow types -->
+  <xs:simpleType name="arrowType.type">
+    <xs:annotation>
+      <xs:documentation>
+        The arrow types for Edges.
+        <p>
+          Valid values are:
+          <ul>
+            <li><b>none</b>: for no arrow</li>
+            <li><b>plain</b>: for the plain arrow</li>
+           </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="none"/>
+      <xs:enumeration value="plain"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Placement of Labels -->
+  <xs:simpleType name="placement.type">
+    <xs:annotation>
+      <xs:documentation>
+        The valid placements for labels.
+        <p>
+          Valid values are:
+          <ul>
+            <li>
+              <b>top</b>: internal top placement 
+            </li>
+            <li>
+              <b>bottom</b>: internal bottom placement 
+            </li>
+            <li>
+              <b>center</b>: internal centered placement
+            </li>
+            <li>
+              <b>left</b>: internal left placement
+            </li>
+            <li>
+              <b>right</b>: internal right placement
+            </li>
+          </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="center"/>
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <!-- Alignment of Labels -->
+
+  <!-- Node Label Models -->
+  
+  <!-- Node Label Positions -->
+  
+    <!-- horizontalTextPosition value type for labels -->
+  <xs:simpleType name="horizontalTextPosition.type">
+    <xs:annotation>
+      <xs:documentation>
+        The valid horizontal text vs. icon alignements for labels.
+        <p>
+          Valid values are:
+          <ul>
+            <li><b>left</b>: place text to the left of the icon</li>
+            <li><b>right</b>: place text to the right of the icon</li>
+            <li><b>center</b>: place text on center of the icon</li>
+          </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="left"/>
+      <xs:enumeration value="right"/>
+      <xs:enumeration value="center"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- verticalTextPosition value type for labels -->
+  <xs:simpleType name="verticalTextPosition.type">
+    <xs:annotation>
+      <xs:documentation>
+        The valid vertical text vs. icon alignements for labels.
+        <p>
+          Valid values are:
+          <ul>
+          <li><b>top</b>: place text above the icon</li>
+          <li><b>bottom</b>: place text below the icon</li>
+          <li><b>center</b>: place text on center of the icon</li>
+          </ul>
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:NMTOKEN">
+      <xs:enumeration value="top"/>
+      <xs:enumeration value="bottom"/>
+      <xs:enumeration value="center"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!--                             -->
+  <!--  Geometric types     -->
+  <!--                             -->
+  <!-- Location defined by x,y coordinates -->
+  <xs:attributeGroup name="Location.group">
+    <xs:annotation>
+      <xs:documentation>
+        Attribute group that describes a two-dimensional location, specified by the x and y attribute.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="x" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The x coordinate of the point.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="y" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The y coordinate of the point.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+
+  <!-- Location defined by x,y coordinates and width,height -->
+  <xs:attributeGroup name="Rectangle.group">
+    <xs:annotation>
+      <xs:documentation>
+        Attribute group that describes a two-dimensional rectangle.
+        <p>
+          The location is specified by the x and y attribute, the dimension by the width and height attributes.
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="x" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The x coordinate of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="y" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The y coordinate of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="width" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The width of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="height" type="xs:double" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The height of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+
+  <!-- type for optional rectangles -->
+  <xs:attributeGroup name="OptionalRectangle.group">
+    <xs:annotation>
+      <xs:documentation>
+        Attribute group that describes a two-dimensional rectangle, where attribtue values are optional.
+        <p>
+          The location is specified by the x and y attribute, the dimension by the width and height attributes.
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="x" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The x coordinate of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="y" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The y coordinate of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="width" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The width of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="height" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The height of the rectangle.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+
+  <!-- type for a path -->
+  <xs:complexType name="Path.type">
+    <xs:annotation>
+      <xs:documentation>
+        Attribute group that describes a two-dimensional path, consisting of a point list together with optional source
+        and target locations.
+        <p>
+          The source resp. target location is specified by the sx and sy resp. tx and ty attributes.
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Point" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            Single control point for two dimensional paths.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attributeGroup ref="Location.group"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+     <xs:attribute name="sx" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The x coordinate of the source point, relative to the center of the start node.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="sy" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The y coordinate of the source point, relative to the center of the start node.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="tx" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The x coordinate of the target point, relative to the center of the start node.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="ty" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The y coordinate of the target point, relative to the center of the start node.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  
+  <!--                             -->
+  <!--     Misc Types       -->
+  <!--                             -->
+
+  <!-- color -->
+  <xs:simpleType name="color.type">
+    <xs:annotation>
+      <xs:documentation>
+        Simple type that encodes a color value.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:restriction base="xs:string">
+      <xs:pattern value="#(([A-F]|[0-9]){2}){3,4}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- Style for a line -->
+  <xs:complexType name="LineStyle.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the attributes of a line style.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="color" type="color.type" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The color of the line.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  <xs:attribute name="type" type="lineType.type" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The type of the line.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="width" type="xs:double" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The width of the line.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  
+  <!--                             -->
+  <!--        Labels            -->
+  <!--                             -->
+  
+  <!-- Basic properties of all kind of labels -->
+  <xs:complexType name="Label.type" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the common attributes of node and edge labels.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="OptionalRectangle.group"/>
+    <xs:attribute name="visible" type="xs:boolean" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          Whether the label is visible or not.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="textColor" type="color.type" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The text color of the label.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="fontFamily" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The font family for the label text.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="fontSize" type="xs:unsignedByte" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The font size for the label text.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <!-- Node Labels -->
+  <xs:complexType name="NodeLabel.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the additional attributes of node labels.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Label.type">
+        <xs:attribute name="placement" type="placement.type" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              The actual label position in the current label model.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="iconData" type="xs:string" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              Reference to an embedded arbitrary serializable resource.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="horizontalTextPosition" type="horizontalTextPosition.type" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              The horizontal text position wrt to an optional icon.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="verticalTextPosition" type="verticalTextPosition.type" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              The vertical text position wrt to an optional icon.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+        <xs:attribute name="iconTextGap" type="xs:byte" use="optional">
+          <xs:annotation>
+            <xs:documentation>
+              The distance between the label text and an optional icon.
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Edge Labels -->
+  <xs:complexType name="EdgeLabel.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the additional attributes of edge labels.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="Label.type">
+      <!-- no extensions -->
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <xs:complexType name="Geometry.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the geometry of simple graph elements.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="Rectangle.group"/>
+  </xs:complexType>
+
+  <!--                             -->
+  <!--      Nodes              -->
+  <!--                             -->
+
+  <!-- Generic attributes for all nodes -->
+  <xs:complexType name="BaseNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the common attributes of a node. 
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Geometry" minOccurs="0" maxOccurs="1" type="Geometry.type">
+        <xs:annotation>
+          <xs:documentation>
+            The location and size of the node.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Fill" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The fill attributes of the node.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="color" type="xs:string" use="optional">
+            <xs:annotation>
+              <xs:documentation>
+                The first fill color.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="BorderStyle" type="LineStyle.type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The LineStyle of the border.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NodeLabel" type="NodeLabel.type" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            The (optional) node label.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+     
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <!-- Shape Node -->
+  <xs:complexType name="ShapeNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the attributes of a ShapeNode
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BaseNode.type">
+        <xs:sequence>
+          <xs:element name="Shape" minOccurs="0" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                The actual shape of a ShapeNode.
+              </xs:documentation>
+            </xs:annotation>
+            <xs:complexType>
+              <xs:attribute name="type" type="shapeType.type" use="required">
+                <xs:annotation>
+                  <xs:documentation>
+                    The shape type.
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:complexType>
+          </xs:element>   
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Group Node -->
+  <xs:complexType name="GroupNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the attributes of a GroupNode.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="ShapeNode.type">
+          <!-- no extensions yet -->
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- Port Node -->
+  <xs:complexType name="PortNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the attributes of a PortNode.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BaseNode.type">
+        <!-- no extensions -->
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  
+  <!-- Element Definitions for  Nodes -->
+  <xs:element name="ShapeNode" type="ShapeNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        ShapeNode element definition.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="GroupNode" type="GroupNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        GroupNode element definition.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+  <xs:element name="PortNode" type="PortNode.type">
+    <xs:annotation>
+      <xs:documentation>
+        PortNode element definition.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+  <xs:element name="ScaledIcon" type="ScaledIcon.type">
+    <xs:annotation>
+      <xs:documentation>
+        ScaledIcon node element definition.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+
+  <!--                             -->
+  <!--      Edges              -->
+  <!--                             -->
+
+   <!-- Generic attributes for all edges -->
+  <xs:complexType name="BaseEdge.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the common attributes of an edge.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Path" type="Path.type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The edge path.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="LineStyle" type="LineStyle.type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The line style used to draw the edge.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Arrows" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The source and target arrows.
+          </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+          <xs:attribute name="source" type="arrowType.type">
+            <xs:annotation>
+              <xs:documentation>
+                The source arrow type.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+          <xs:attribute name="target" type="arrowType.type">
+            <xs:annotation>
+              <xs:documentation>
+                The target arrow type.
+              </xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    <!-- Edge label -->
+    <xs:element name="EdgeLabel" type="EdgeLabel.type" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            The edge label.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+    </xs:complexType>
+    
+  <!-- Polyline edges -->
+  <xs:complexType name="PolyLineEdge.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type that describes the attributes of a PolylineEdge.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexContent>
+      <xs:extension base="BaseEdge.type">
+      <!-- no extension yet -->
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  
+  <!-- Element definitions for edges -->
+  <xs:element name="PolyLineEdge" type="PolyLineEdge.type">
+    <xs:annotation>
+      <xs:documentation>
+        PolyLineEdge element definition.
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  
+ 
+ 
+
+
+  <!-- Node port support -->
+  
+ 
+  <!-- Shared Resources -->
+  <xs:complexType name="ImageIcon.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type for an image icon.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="image" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          Reference to an image resource. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ScaledIcon.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type for a Scaled Icon.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:choice>
+      <xs:element name="ImageIcon" type="ImageIcon.type">
+        <xs:annotation>
+          <xs:documentation>
+            A shared image icon resource.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      </xs:choice>
+    </xs:sequence>
+     <xs:attribute name="xScale" use="required" type="xs:double">
+      <xs:annotation>
+        <xs:documentation>
+          The x scale factor of the icon. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+     <xs:attribute name="yScale" use="required" type="xs:double">
+       <xs:annotation>
+         <xs:documentation>
+           The y scale factor of the icon.
+         </xs:documentation>
+       </xs:annotation>
+     </xs:attribute>
+   </xs:complexType>
+ 
+    
+<xs:complexType name="Resource.type" mixed="true">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type for a shared resource element inside a resource block container.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:annotation>
+        <xs:documentation>
+          The actual content. Note that arbitrary (wellformed) content is allowed here.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:any minOccurs="0" maxOccurs="1" processContents="strict"/>
+    </xs:sequence>
+    <xs:attribute name="id" use="required">
+      <xs:annotation>
+        <xs:documentation>
+          The id of the shared resource. Needed to reference this resource.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="type" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The type of the shared resource.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+    <xs:attribute name="format" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The format of the shared resource.
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:complexType>
+
+  <xs:complexType name="ResourceBlock.type">
+    <xs:annotation>
+      <xs:documentation>
+        Complex type for a shared resource block container.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="Resource" type="Resource.type" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            A shared resource element.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Resources" type="ResourceBlock.type">
+    <xs:annotation>
+      <xs:documentation>
+        Resource block element definition.
+      </xs:documentation>
+    </xs:annotation>
+    <xs:key name="resource_id_key">
+      <xs:annotation>
+        <xs:documentation>
+          Ensures: existence and uniqueness of the id attributes of
+          each &lt;Resource> element in this resource block.
+        </xs:documentation>
+      </xs:annotation>
+      <xs:selector xpath=".//s:Resource"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+  </xs:element>
+  
+</xs:schema>

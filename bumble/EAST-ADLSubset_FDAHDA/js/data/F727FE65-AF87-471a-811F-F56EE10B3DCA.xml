@@ -1,0 +1,9 @@
+tocTab[tocTab.length] = new Array("0.2.3:1", "", "Values", "EARoot/EA2/EA3/EA122.htm", "175.png", "59", "0", "", "Logical diagram0","{FF708EC0-70FE-49aa-8102-F7CB869AFD92}");
+tocTab[tocTab.length] = new Array("0.2.3:2", "", "EAArrayValue", "EARoot/EA2/EA3/EA125.htm", "5.png", "E274", "0", "", "Class0","{522E6AF4-A0B3-4606-9FA4-75131A3115EC}");
+tocTab[tocTab.length] = new Array("0.2.3:3", "", "EABooleanValue", "EARoot/EA2/EA3/EA126.htm", "5.png", "E271", "0", "", "Class0","{26A6AA76-7DC1-4efc-AE80-99EA0F9F892E}");
+tocTab[tocTab.length] = new Array("0.2.3:4", "", "EACompositeValue", "EARoot/EA2/EA3/EA127.htm", "5.png", "E277", "0", "", "Class0","{C75CA405-1DF7-4732-8BA9-35E62A0A6BD3}");
+tocTab[tocTab.length] = new Array("0.2.3:5", "", "EAEnumerationValue", "EARoot/EA2/EA3/EA128.htm", "5.png", "E273", "0", "", "Class0","{3D2374C5-E3D6-4dd4-9029-D81A4E41938F}");
+tocTab[tocTab.length] = new Array("0.2.3:6", "", "«atpMixedString» EAExpression", "EARoot/EA2/EA3/EA129.htm", "5.png", "E272", "0", "", "Class0","{2FCEE92E-A893-4601-AA4D-52CE3A301564}");
+tocTab[tocTab.length] = new Array("0.2.3:7", "", "EANumericalValue", "EARoot/EA2/EA3/EA130.htm", "5.png", "E275", "0", "", "Class0","{76BC30C9-D7F4-4f40-BD77-D87AB50B3E2C}");
+tocTab[tocTab.length] = new Array("0.2.3:8", "", "EAStringValue", "EARoot/EA2/EA3/EA131.htm", "5.png", "E278", "0", "", "Class0","{F6D6431D-A664-4f4f-BCA0-821C62B7AC74}");
+tocTab[tocTab.length] = new Array("0.2.3:9", "", "«atpPrototype» EAValue", "EARoot/EA2/EA3/EA132.htm", "5.png", "E276", "0", "", "Class0","{A1C876A3-2D63-4c68-9339-009B0F4E5DFF}");

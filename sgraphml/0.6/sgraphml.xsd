@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+
+<!-- Header -->
+<xs:schema
+    targetNamespace="http://graphml.graphdrawing.org/xmlns"
+
+    xmlns="http://graphml.graphdrawing.org/xmlns"
+    xmlns:g="http://graphml.graphdrawing.org/xmlns"
+    xmlns:s="http://www.synligare.eu/sgraphml"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ 
+    elementFormDefault="qualified"
+    attributeFormDefault="unqualified"
+    >
+
+  <xs:annotation>
+    <xs:documentation>
+      Schema definition of the SGraphML language, an extension to GraphML.
+    </xs:documentation>
+  </xs:annotation>
+  <xs:import namespace="http://www.synligare.eu/sgraphml" schemaLocation="sfeatures.xsd"/>
+
+  <!--<xs:include schemaLocation="graphml-parseinfo.xsd"/>-->
+
+  <!-- Redefinition of the elements in the graphml-structure schema -->
+  <xs:redefine schemaLocation="graphml.xsd">
+
+    <!-- Modify the data-extension.type to allow adding sgraphml elements to nodes etc.-->
+    <xs:complexType name="data-extension.type">
+      <xs:complexContent mixed="true">
+        <xs:extension base="data-extension.type">
+          <xs:sequence>
+            <xs:any minOccurs="0" maxOccurs="unbounded" processContents="strict"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+
+    <!-- Store an additional sgraphml.type attribute on the keys
+         the key.attributes.attrib is added from graphml.xsd (to enable emf model generation)
+    -->
+    <xs:attributeGroup name="key.extra.attrib">
+      <xs:annotation>
+        <xs:documentation>
+          Redefinition of file graphml-structure.xsd.
+          <p>
+            Extends the attribute group key.extra.attrib (which takes
+            part in the attribute list of &lt;key>) by adding the
+            the attribute group key.attributes.attrib (according to graphml)
+            and the attribute sgraphml.type which is defined below.
+          </p>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:attributeGroup ref="key.extra.attrib"/>
+      <xs:attributeGroup ref="key.attributes.attrib"/>
+      <xs:attribute name="sgraphml.type" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>
+            Custom yfiles specific attribute that allows to specify an additional data type.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:attributeGroup>
+
+
+    <!-- The east-adl model element MetaClass is stored as attribute at the node element -->
+    <xs:attributeGroup name="node.extra.attrib">
+      <xs:annotation>
+        <xs:documentation>
+          Redefinition of file graphml-structure.xsd.
+          <p>Extends the attribute group node.extra.attrib by adding a
+            sgraphml specific attribute for the model element reference type.
+          </p>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:attributeGroup ref="node.extra.attrib"/>
+      <xs:attributeGroup ref="node.parseinfo.attrib"/>
+      <xs:attribute name="elementType" type="xs:string" use="optional">
+        <xs:annotation>
+          <xs:documentation>
+            The element metaclass.
+          </xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:attributeGroup>
+  
+
+  <!-- The east-adl model element MetaClass is stored as attribute at the edge element -->
+  <xs:attributeGroup name="edge.extra.attrib">
+    <xs:annotation>
+      <xs:documentation>
+        Redefinition of file graphml-structure.xsd.
+        <p>
+          Extends the attribute group edga.extra.attrib by adding a
+          sgraphml specific attribute for the model element reference type.
+        </p>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:attributeGroup ref="edge.extra.attrib"/>
+    <xs:attribute name="elementType" type="xs:string" use="optional">
+      <xs:annotation>
+        <xs:documentation>
+          The element metaclass. 
+        </xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  </xs:redefine>
+
+</xs:schema>
+
+

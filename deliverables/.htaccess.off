@@ -1,0 +1,5 @@
+AuthName "Please Request Login to access the Synligare Deliverables from info@synligare.eu"
+AuthType Basic
+AuthUserFile /customers/3/2/a/synligare.eu/httpd.www/deliverables/.htpasswd
+AuthGroupFile /dev/null 
+require valid-user 

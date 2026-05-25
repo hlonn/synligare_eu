@@ -1,0 +1,4 @@
+tocTab[tocTab.length] = new Array("0.1.2.1:1", "", "HardwareConnector", "EARoot/EA1/EA2/EA1/EA68.htm", "175.png", "11", "0", "", "Logical diagram0","{71C6C526-54E6-4e2a-9F0F-2FC31B163495}");
+tocTab[tocTab.length] = new Array("0.1.2.1:2", "", "HardwarePortConnector", "EARoot/EA1/EA2/EA1/EA70.htm", "175.png", "12", "0", "", "Logical diagram0","{91A6D3AB-CD92-402e-ADEC-6398481BF089}");
+tocTab[tocTab.length] = new Array("0.1.2.1:3", "", "«instanceRef» HardwareConnector_port", "EARoot/EA1/EA2/EA1/EA73.htm", "5.png", "E79", "0", "", "Class0","{A026C05F-7FC6-4c46-843F-5D2086B56565}");
+tocTab[tocTab.length] = new Array("0.1.2.1:4", "", "«instanceRef» HardwarePortConnector_port", "EARoot/EA1/EA2/EA1/EA74.htm", "5.png", "E80", "0", "", "Class0","{C8A001F2-4DBE-4251-AA6D-C9EDFA45F14E}");

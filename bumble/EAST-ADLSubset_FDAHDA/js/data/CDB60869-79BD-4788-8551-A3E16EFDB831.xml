@@ -1,0 +1,5 @@
+tocTab[tocTab.length] = new Array("0.1.1.1:1", "", "FunctionAllocation", "EARoot/EA1/EA1/EA1/EA38.htm", "175.png", "8", "0", "", "Logical diagram0","{D9476A6F-038D-4661-93A0-7961A3BFAE14}");
+tocTab[tocTab.length] = new Array("0.1.1.1:2", "", "FunctionConnector", "EARoot/EA1/EA1/EA1/EA40.htm", "175.png", "9", "0", "", "Logical diagram0","{9B17248A-757A-4b8f-8577-2D96372D8D6D}");
+tocTab[tocTab.length] = new Array("0.1.1.1:3", "", "«instanceRef» FunctionAllocation_allocatedElement", "EARoot/EA1/EA1/EA1/EA43.htm", "5.png", "E61", "0", "", "Class0","{BFC688AB-66B4-4708-840A-20D3A84DCBDB}");
+tocTab[tocTab.length] = new Array("0.1.1.1:4", "", "«instanceRef» FunctionAllocation_target", "EARoot/EA1/EA1/EA1/EA44.htm", "5.png", "E59", "0", "", "Class0","{2DC82CBD-1A5F-407b-8B54-C39D0AF43453}");
+tocTab[tocTab.length] = new Array("0.1.1.1:5", "", "«instanceRef» FunctionConnector_port", "EARoot/EA1/EA1/EA1/EA45.htm", "5.png", "E60", "0", "", "Class0","{527FF4D4-61FC-4db3-BFD2-AF17B822EB3D}");

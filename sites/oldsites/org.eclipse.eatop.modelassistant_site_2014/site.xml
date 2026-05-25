@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description name="Model Assistants">
+      The model assistants update site contains three features, which are error propagation, HiP-HOPS Fault Tree Analysis and version control
+   </description>
+   <feature url="features/org.eclipse.eatop.modelassistant.errorpropagation_feature_1.0.0.201408302103.jar" id="org.eclipse.eatop.modelassistant.errorpropagation_feature" version="1.0.0.201408302103" arch="x86">
+      <category name="org.eclipse.eatop.modelassistant"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.modelassistant.hiphopsfta_feature_1.0.0.201408302103.jar" id="org.eclipse.eatop.modelassistant.hiphopsfta_feature" version="1.0.0.201408302103" os="" arch="x86">
+      <category name="org.eclipse.eatop.modelassistant"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.modelassistant.versioncontrol_feature_1.0.0.201408302103.jar" id="org.eclipse.eatop.modelassistant.versioncontrol_feature" version="1.0.0.201408302103" arch="x86">
+      <category name="org.eclipse.eatop.modelassistant"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.modelassistant" label="Model Assistants"/>
+</site>

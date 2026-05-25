@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.fmuimport.feature_1.0.1.201505082124.jar" id="org.eclipse.eatop.volvo.fmuimport.feature" version="1.0.1.201505082124">
+      <category name="FMU Import"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.fmuimport.source.feature_1.0.1.201505082124.jar" id="org.eclipse.eatop.volvo.fmuimport.source.feature" version="1.0.1.201505082124">
+      <category name="FMU Import"/>
+   </feature>
+   <category-def name="FMU Import" label="FMU Import"/>
+</site>

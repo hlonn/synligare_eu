@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.modelassistant.errorpropagation.feature_1.0.0.201501252002.jar" id="org.eclipse.eatop.modelassistant.errorpropagation.feature" version="1.0.0.201501252002">
+      <category name="model.assistant"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.modelassistant.hiphopsfta.feature_1.0.0.201501252002.jar" id="org.eclipse.eatop.modelassistant.hiphopsfta.feature" version="1.0.0.201501252002">
+      <category name="model.assistant"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.modelassistant.versioncontrol.feature_1.0.0.201501252002.jar" id="org.eclipse.eatop.modelassistant.versioncontrol.feature" version="1.0.0.201501252002">
+      <category name="model.assistant"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.diagramviewer.generator.feature_1.0.0.201501252002.jar" id="org.eclipse.eatop.diagramviewer.generator.feature" version="1.0.0.201501252002">
+      <category name="model.visualization"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.visulaizer.diagramviewer.feature_1.0.0.201501252002.jar" id="org.eclipse.eatop.visulaizer.diagramviewer.feature" version="1.0.0.201501252002">
+      <category name="model.visualization"/>
+   </feature>
+   <category-def name="model.assistant" label="Model Assistant">
+      <description>
+         The features to assistant model transformation, version control together with Fault Tree Analysis in EATOP
+      </description>
+   </category-def>
+   <category-def name="model.visualization" label="Model Visualization">
+      <description>
+         Visualizate the model in EATOP
+      </description>
+   </category-def>
+</site>

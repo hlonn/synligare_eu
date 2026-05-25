@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.volvo.henrykafura.feature_1.0.0.201507021358.jar" id="org.eclipse.volvo.henrykafura.feature" version="1.0.0.201507021358">
+      <category name="org.eclipse.eatop.volvo.henrykafura.category1"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.volvo.henrykafura.category1" label="Henry Kafura"/>
+</site>

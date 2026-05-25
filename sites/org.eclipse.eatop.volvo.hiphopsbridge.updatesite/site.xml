@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.hiphopsbridge.feature_1.0.0.201506261707.jar" id="org.eclipse.eatop.volvo.hiphopsbridge.feature" version="1.0.0.201506261707">
+      <category name="HiP-Hops Bridge"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.hiphopsbridge.source.feature_1.0.0.201506261707.jar" id="org.eclipse.eatop.volvo.hiphopsbridge.source.feature" version="1.0.0.201506261707">
+      <category name="HiP-Hops Bridge"/>
+   </feature>
+   <category-def name="HiP-Hops Bridge" label="HiP-Hops Bridge"/>
+</site>

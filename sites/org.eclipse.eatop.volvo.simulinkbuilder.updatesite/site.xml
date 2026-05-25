@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.simulinkbuilder.feature_1.0.0.201601081536.jar" id="org.eclipse.eatop.volvo.simulinkbuilder.feature" version="1.0.0.201601081536">
+      <category name="SimulinkBuilder"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.simulinkbuilder.source.feature_1.0.0.201601081536.jar" id="org.eclipse.eatop.volvo.simulinkbuilder.source.feature" version="1.0.0.201601081536">
+      <category name="SimulinkBuilder"/>
+   </feature>
+   <category-def name="SimulinkBuilder" label="SimulinkBuilder"/>
+</site>

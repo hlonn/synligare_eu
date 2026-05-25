@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.metrics.feature_1.0.0.201604071617.jar" id="org.eclipse.eatop.volvo.metrics.feature" version="1.0.0.201604071617">
+      <category name="Metrics"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.metrics.source.feature_1.0.0.201604071617.jar" id="org.eclipse.eatop.volvo.metrics.source.feature" version="1.0.0.201604071617">
+      <category name="Metrics"/>
+   </feature>
+   <category-def name="Metrics" label="New Category 1"/>
+</site>

@@ -1,0 +1,8 @@
+tocTab[tocTab.length] = new Array("0.2.4:1", "", "PrimitiveTypes", "EARoot/EA2/EA4/EA133.htm", "175.png", "61", "0", "", "Logical diagram0","{19C75D63-760B-410c-92C8-40E7449EF419}");
+tocTab[tocTab.length] = new Array("0.2.4:2", "", "«primitive» Boolean", "EARoot/EA2/EA4/EA136.htm", "5.png", "E286", "0", "", "Class0","{9365CFD9-2871-41ff-87BF-C275FEACE8C1}");
+tocTab[tocTab.length] = new Array("0.2.4:3", "", "«primitive» Float", "EARoot/EA2/EA4/EA137.htm", "5.png", "E283", "0", "", "Class0","{49898B10-8A94-41e6-BED2-7F1FAF97751A}");
+tocTab[tocTab.length] = new Array("0.2.4:4", "", "«primitive» Identifier", "EARoot/EA2/EA4/EA138.htm", "5.png", "E284", "0", "", "Class0","{4C96DDE8-BF90-4e35-8377-A8F6149ED921}");
+tocTab[tocTab.length] = new Array("0.2.4:5", "", "«primitive» Integer", "EARoot/EA2/EA4/EA139.htm", "5.png", "E287", "0", "", "Class0","{AF358DFF-5FE1-4156-8BA0-0797C0B9FA9F}");
+tocTab[tocTab.length] = new Array("0.2.4:6", "", "«primitive» Numerical", "EARoot/EA2/EA4/EA140.htm", "5.png", "E285", "0", "", "Class0","{8F2F332E-18D3-4797-AACC-4F1249E644E6}");
+tocTab[tocTab.length] = new Array("0.2.4:7", "", "«primitive» Ref", "EARoot/EA2/EA4/EA141.htm", "5.png", "E282", "0", "", "Class0","{405E6B24-05A5-4469-B58F-6A005065B3A5}");
+tocTab[tocTab.length] = new Array("0.2.4:8", "", "«primitive» String", "EARoot/EA2/EA4/EA142.htm", "5.png", "E288", "0", "", "Class0","{E1926EE2-68FF-48ff-A194-4B3E069ADD4E}");

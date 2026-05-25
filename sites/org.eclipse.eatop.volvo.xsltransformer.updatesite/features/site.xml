@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.sgraphml.gefeditor.feature_0.7.0.201512171629.jar" id="org.eclipse.eatop.volvo.sgraphml.gefeditor.feature" version="0.7.0.201512171629">
+      <category name="SGraphML GEF Editor"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.sgraphml.gefeditor.source.feature_0.7.0.201512171629.jar" id="org.eclipse.eatop.volvo.sgraphml.gefeditor.source.feature" version="0.7.0.201512171629">
+      <category name="SGraphML GEF Editor"/>
+   </feature>
+   <category-def name="SGraphML GEF Editor" label="SGraphML GEF Editor"/>
+</site>

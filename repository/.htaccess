@@ -1,0 +1,5 @@
+AuthName "(Please request password from henrik.lonn@volvo.com)"
+AuthType Basic
+AuthUserFile /customers/7/4/c/c9nvm403l/webroots/www/repository/.htpasswd
+AuthGroupFile /dev/null 
+require valid-user 

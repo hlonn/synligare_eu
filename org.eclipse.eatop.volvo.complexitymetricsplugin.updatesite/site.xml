@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.complexitymetricsplugin.feature_1.0.0.201507031007.jar" id="org.eclipse.eatop.volvo.complexitymetricsplugin.feature" version="1.0.0.201507031007">
+      <category name="org.eclipse.eatop.volvo.complexityplugin.category1"/>
+   </feature>
+   <category-def name="org.eclipse.eatop.volvo.complexityplugin.category1" label="Category"/>
+</site>

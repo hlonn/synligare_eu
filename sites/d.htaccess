@@ -1,0 +1,5 @@
+AuthName "Ange Användarnamn och Lösenord"
+AuthType Basic
+AuthUserFile /customers/7/4/c/c9nvm403l/webroots/www/sites/.htpasswd
+AuthGroupFile /dev/null 
+require valid-user 

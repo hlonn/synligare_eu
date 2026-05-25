@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.eclipse.eatop.volvo.linearpropertyanalyzer.feature_1.0.0.201505082141.jar" id="org.eclipse.eatop.volvo.linearpropertyanalyzer.feature" version="1.0.0.201505082141">
+      <category name="Linear Property Analyzer"/>
+   </feature>
+   <feature url="features/org.eclipse.eatop.volvo.linearpropertyanalyzer.source.feature_1.0.0.201505082141.jar" id="org.eclipse.eatop.volvo.linearpropertyanalyzer.source.feature" version="1.0.0.201505082141">
+      <category name="Linear Property Analyzer"/>
+   </feature>
+   <category-def name="Linear Property Analyzer" label="Linear Property Analyzer"/>
+</site>
